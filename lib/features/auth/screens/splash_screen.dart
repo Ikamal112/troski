@@ -1,3 +1,4 @@
+import "onboarding_screen.dart";
 import 'package:flutter/material.dart';
 import '../../../core/constants/app_colors.dart';
 
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     // Simulate initialization and navigate
     Future.delayed(const Duration(seconds: 4), () {
-      // Navigation logic will go here
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const OnboardingScreen()));
     });
   }
 
